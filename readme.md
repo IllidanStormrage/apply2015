@@ -4,3 +4,4 @@
 1. Laravel框架
 2. Redis缓存服务
 3. Envoy(或者crontab)
+4. 后台使用AmazueUI
