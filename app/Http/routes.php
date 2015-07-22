@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::group(['namespace' => 'APi'], function() {
     route::get('test', ['uses' => 'AcademyController@index']);
 });
+
+
+
