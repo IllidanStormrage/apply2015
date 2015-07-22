@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
-    route::get('test', ['as' => 'api/test', 'uses' => 'AcademyController@index']);
+    route::post('test', ['middleware' => 'roleCheck', 'as' => 'api/test', 'uses' => 'AcademyController@index']);
 });
 
 /**********************************/

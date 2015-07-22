@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Model\User;
 use Closure;
 
 class TokenCheck
@@ -16,9 +17,12 @@ class TokenCheck
     public function handle($request, Closure $next)
     {
         if($request->input('token') && $request->input('uid')) {
-
+            $user = User::find($request->input('uid'));
+            if($user['remember_token'] !== $request->input('token')) {
+                return ['status' => 401, 'error' => '请先登录!'];
+            }
         } else {
-            return redirect('Api/test');// todo login route
+            return ['status' => 401, 'error' => '请先登录!'];
         }
         return $next($request);
     }
