@@ -10,11 +10,20 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+/********Lich's Route***************/
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['namespace' => 'APi'], function() {
-    route::get('test', ['uses' => 'AcademyController@index']);
+Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
+    route::get('test', ['as' => 'api/test', 'uses' => 'AcademyController@index']);
 });
+
+/**********************************/
+
+
+/********Excelsior's Route***************/
+Route::group(['prefix' => 'home', 'namespace' => 'Home'], function() {
+    route::get('test', ['as' => 'home/test', 'uses' => 'AcademyController@index']);
+});
+/**********************************/
