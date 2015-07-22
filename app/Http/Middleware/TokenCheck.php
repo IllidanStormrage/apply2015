@@ -15,7 +15,11 @@ class TokenCheck
      */
     public function handle($request, Closure $next)
     {
-        $request->input('token');
+        if($request->input('token') && $request->input('uid')) {
+
+        } else {
+            return redirect('Api/test');// todo login route
+        }
         return $next($request);
     }
 }
