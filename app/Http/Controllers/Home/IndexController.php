@@ -7,6 +7,6 @@
 
     class IndexController extends Controller {
         public function index() {
-
+            return view('home.Index.index')->with('title', '测试');
         }
     }
