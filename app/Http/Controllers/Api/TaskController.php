@@ -87,6 +87,7 @@ class TaskController extends Controller
         //
     }
 
+    //缓存权限表
     public function cacheRoleRelation() {
         $roles = Role::all();
         foreach($roles as $role) {

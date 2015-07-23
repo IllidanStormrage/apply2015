@@ -19,10 +19,10 @@ class TokenCheck
         if($request->input('token') && $request->input('uid')) {
             $user = User::find($request->input('uid'));
             if($user['remember_token'] !== $request->input('token')) {
-                return ['status' => 401, 'error' => '请先登录!'];
+                return ['status' => 401, 'info' => '请先登录!'];
             }
         } else {
-            return ['status' => 401, 'error' => '请先登录!'];
+            return ['status' => 401, 'info' => '请先登录!'];
         }
         return $next($request);
     }
