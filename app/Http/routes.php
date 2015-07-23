@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
     route::post('test', ['middleware' => 'roleCheck', 'as' => 'api/test', 'uses' => 'AcademyController@index']);
+    Route::get('cache', ['as' => 'api/test', 'uses' => 'TaskController@cacheRoleRelation']);
 });
 
 /**********************************/
