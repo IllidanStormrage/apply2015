@@ -21,7 +21,13 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
     }]);
     Route::post('test', ['middleware' => 'roleCheck', 'as' => 'api/test', 'uses' => 'AcademyController@index']);
     Route::post('login', ['as' => 'api/login', 'uses' => 'LoginController@login']);
-    Route::get('cache', ['as' => 'api/test', 'uses' => 'TaskController@cacheRoleRelation']);
+
+
+    /***正式路由****/
+    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@cacheRoleRelation']);
+    Route::get('academy', ['as' => 'api/academy', 'uses' => 'AcademyController@index']);
+
+    /*************/
 });
 
 /**********************************/

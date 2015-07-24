@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Auth;
+use App\Model\User;
+use App\User_role;
 use Illuminate\Support\Facades\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -13,13 +16,30 @@ class LoginController extends Controller
         if(!$this->verify($input)) {
             return ['status' => 400, 'info' => '数据错误!'];
         }
-        return Auth::attempt(['studentnum' => $input['username'], 'password' => $input['password']]);
+        if(\Auth::attempt(['studentnum' => $input['username'], 'password' => $input['password']], true)) {
+            $userInfo = \Auth::user();
+            $roleInfo = User_role::where('user_id', '=', $userInfo['id'])->get();
+            $data = [
+                'baseinfo' => $userInfo,
+                'role' => $roleInfo
+            ];
+            \Cache::forever('user_id_'.$userInfo['id'], $data);
+            return [
+                        'status' => 200,
+                        'info' => '登录成功!',
+                        'data'=> $data
+            ];
+        }
+
+
+        return ['status' => 400, 'info' => '用户名或密码错误!'];
     }
 
     private function verify($input) {
-        $v = $this->validate($input,
+
+        $v = \Validator::make($input,
             [
-                'username' => 'required|numeric|size:10',
+                'username' => 'required|numeric',
                 'password' => 'required|min:6|max:18'
             ]);
         if($v->fails()) {
