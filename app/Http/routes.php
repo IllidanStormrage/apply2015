@@ -17,7 +17,18 @@ Route::get('/', function () {
 
 
 Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
-    route::get('test', ['as' => 'api/test', 'uses' => 'AcademyController@index']);
+    Route::get('pwd', ['as' => 'api/pwd', function() {
+        return bcrypt('123456');
+    }]);
+    Route::post('test', ['middleware' => 'roleCheck', 'as' => 'api/test', 'uses' => 'AcademyController@index']);
+    Route::post('login', ['as' => 'api/login', 'uses' => 'LoginController@login']);
+
+
+    /***正式路由****/
+    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@cacheRoleRelation']);
+    Route::get('academy', ['as' => 'api/academy', 'uses' => 'AcademyController@index']);
+
+    /*************/
 });
 
 /**********************************/
@@ -25,7 +36,11 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
 
 /********Excelsior's Route***************/
 Route::group(['prefix' => 'home', 'namespace' => 'Home'], function() {
+<<<<<<< HEAD
     route::get('test', ['as' => 'home/test', 'uses' => 'IndexController@index']);
+=======
+    Route::get('test', ['as' => 'home/test', 'uses' => 'AcademyController@index']);
+>>>>>>> e0bc5f0fc82cb4f8397f7e9206c54a07b81377ff
 });
 /**********************************/
 
