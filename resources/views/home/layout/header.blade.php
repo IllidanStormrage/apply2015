@@ -50,20 +50,22 @@
                         </a>
                     </div>
 
-                    <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
-                        <ul class="nav navbar-nav    ">
+                    <div class="topbar-main">
+                        <a id="menu-toggle" href="#">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <ul class="nav navbar-nav">
                             <li class="active"><a href="index.html">Dashboard</a>
                             </li>
                         </ul>
                         <!-- 顶部搜索 -->
-                        <form id="topbar-search" action="#" method="GET" class="hidden-xs">
+                        <form id="topbar-search">
                             <div class="input-group">
                                 <input type="text" placeholder="Search..." class="form-control" /><span class="input-group-btn"><a href="javascript:;" class="btn submit"><i class="fa fa-search"></i></a></span>
                             </div>
                         </form>
                         <!-- -->
                         <ul class="nav navbar navbar-top-links navbar-right mbn">
-
                             <li class="dropdown">
                                 <a data-hover="dropdown" href="#" class="dropdown-toggle">
                                     <i class="fa fa-bell fa-fw"></i>
@@ -177,7 +179,7 @@
                             <li class="dropdown topbar-user">
                                 <a data-hover="dropdown" href="#" class="dropdown-toggle">
                                     <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;
-                                    <span class="hidden-xs">John Doe</span>&nbsp;
+                                    <span >John Doe</span>&nbsp;
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-user pull-right">
@@ -201,7 +203,7 @@
                                 </ul>
                             </li>
 
-                            <li id="topbar-chat" class="hidden-xs">
+                            <li id="topbar-chat" >
                                 <a href="javascript:void(0)" class="btn-chat">
                                     <i class="fa fa-comments"></i>
                                     <span class="badge badge-info">3</span>
@@ -254,15 +256,20 @@
                                     <i class="fa fa-laptop fa-fw">
                                         <div class="icon-bg bg-pink"></div>
                                     </i>
-                                    <span class="menu-title">Frontend</span>
+                                    <span class="menu-title">组织详情</span>
                                     <span class="fa arrow"></span>
-                                    <span class="label label-yellow">v3.0</span>
                                 </a>
                                 <ul class="nav nav-second-level">
                                     <li>
                                         <a href="frontend-one-page.html">
                                             <i class="fa fa-rocket"></i>
-                                            <span class="submenu-title">One Page</span>
+                                            <span class="submenu-title">主席团详情</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="frontend-one-page.html">
+                                            <i class="fa fa-rocket"></i>
+                                            <span class="submenu-title">部门详情</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -274,11 +281,32 @@
                                     <i class="fa fa-database fa-fw">
                                         <div class="icon-bg bg-red"></div>
                                     </i>
-                                    <span class="menu-title">Data Grids</span>
+                                    <span class="menu-title">新生报名</span>
                                     <span class="fa arrow"></span>
-                                    <span class="label label-yellow">Hot</span>
+                                    <span class="label label-red">Hot</span>
                                 </a>
                                 <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-table"></i>
+                                            <span class="submenu-title">审核流程</span>
+                                            <span class="fa arrow"></span>
+                                        </a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="grid-range-slider.html">
+                                                    <i class="fa fa-angle-right"></i>
+                                                    <span class="submenu-title">流程设置</span>
+                                                </a>
+                                            </li>
+                                             <li>
+                                                <a href="grid-range-slider.html">
+                                                    <i class="fa fa-angle-right"></i>
+                                                    <span class="submenu-title">流程进度</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         <a href="#">
                                             <i class="fa fa-table"></i>

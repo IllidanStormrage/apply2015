@@ -27,7 +27,6 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
     /***正式路由****/
     Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@cacheRoleRelation']);
     Route::get('academy', ['as' => 'api/academy', 'uses' => 'AcademyController@index']);
-
     /*************/
 });
 
