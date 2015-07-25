@@ -30,8 +30,6 @@ class LoginController extends Controller
                         'data'=> $data
             ];
         }
-
-
         return ['status' => 400, 'info' => '用户名或密码错误!'];
     }
 

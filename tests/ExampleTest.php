@@ -11,9 +11,31 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicExample()
-    {
+    public function testBasicExample() {
         $this->visit('/')
              ->see('Laravel 5');
+    }
+
+    public function testAcademy() {
+        $this->get('api/academy');
+    }
+
+    public function taskCache() {
+        $this->get('api/cache')->seeJson(['status'=>200]);
+    }
+
+//    public function testLoginOK() {
+//        $data = ['username'=>'2013211854','password'=>'123456', '_token'=>csrf_token()];
+//        $this->post('api/login', $data)
+//            ->seeJson([
+//                'status' => 200
+//            ]);
+//    }
+
+    public function testLoginFail() {
+        $this->post('api/login')
+            ->seeJson([
+                'status' => 400
+            ]);
     }
 }
