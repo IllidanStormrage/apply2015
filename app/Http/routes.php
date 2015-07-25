@@ -36,11 +36,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
 
 /********Excelsior's Route***************/
 Route::group(['prefix' => 'home', 'namespace' => 'Home'], function() {
-<<<<<<< HEAD
     route::get('test', ['as' => 'home/test', 'uses' => 'IndexController@index']);
-=======
-    Route::get('test', ['as' => 'home/test', 'uses' => 'AcademyController@index']);
->>>>>>> e0bc5f0fc82cb4f8397f7e9206c54a07b81377ff
 });
 /**********************************/
 
