@@ -2,28 +2,30 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Auth;
-use App\Model\User;
-use App\User_role;
+use Auth;
+use Illuminate\Routing\Controller;
+use App\Model\User_role;
 use Illuminate\Support\Facades\Request;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
-class LoginController extends Controller
-{
+class LoginController extends Controller {
     public function login() {
+
         $input = Request::only('username', 'password');
         if(!$this->verify($input)) {
             return ['status' => 400, 'info' => '数据错误!'];
         }
-        if(\Auth::attempt(['studentnum' => $input['username'], 'password' => $input['password']], true)) {
-            $userInfo = \Auth::user();
+        if(Auth::attempt(['studentnum' => $input['username'], 'password' => $input['password']], true)) {
+            $userInfo = Auth::user();
             $roleInfo = User_role::where('user_id', '=', $userInfo['id'])->get();
+            foreach($roleInfo as $role)
+                $role->department;
             $data = [
-                'baseinfo' => $userInfo,
-                'role' => $roleInfo
+                'baseinfo' => $userInfo->toArray(),
+                'role' => $roleInfo->toArray()
             ];
             \Cache::forever('user_id_'.$userInfo['id'], $data);
+            //todo pc/mobile
             return [
                         'status' => 200,
                         'info' => '登录成功!',
