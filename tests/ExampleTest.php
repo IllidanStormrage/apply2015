@@ -47,11 +47,9 @@ class ExampleTest extends TestCase
                     'role_id' => 6,
                     'department_id' => 1
         ];
-        $this->withoutMiddleware();
-        $this->post('api/addmember', $data);
-//            ->seeJson([
-//                'status' => 200
-//            ]);
-        dd($this->response->getContent());
+        $this->post('api/addmember', $data)
+            ->seeJson([
+                'status' => 200
+            ]);
     }
 }

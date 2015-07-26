@@ -15,15 +15,14 @@ class LoginController extends Controller {
         if(!$this->verify($input)) {
             return ['status' => 400, 'info' => '数据错误!'];
         }
-
-        if(Auth::attempt((array)['studentnum' => $input['username'], 'password' => $input['password']], true)) {
+        if(Auth::attempt(['studentnum' => $input['username'], 'password' => $input['password']], true)) {
             $userInfo = Auth::user();
             $roleInfo = User_role::where('user_id', '=', $userInfo['id'])->get();
-            foreach((array)$roleInfo as $role)
+            foreach($roleInfo as $role)
                 $role->department;
             $data = [
-                'baseinfo' => $userInfo,
-                'role' => $roleInfo
+                'baseinfo' => $userInfo->toArray(),
+                'role' => $roleInfo->toArray()
             ];
             \Cache::forever('user_id_'.$userInfo['id'], $data);
             //todo pc/mobile
