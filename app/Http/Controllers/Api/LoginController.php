@@ -16,10 +16,10 @@ class LoginController extends Controller {
             return ['status' => 400, 'info' => '数据错误!'];
         }
 
-        if(Auth::attempt(['studentnum' => $input['username'], 'password' => $input['password']], true)) {
+        if(Auth::attempt((array)['studentnum' => $input['username'], 'password' => $input['password']], true)) {
             $userInfo = Auth::user();
             $roleInfo = User_role::where('user_id', '=', $userInfo['id'])->get();
-            foreach($roleInfo as $role)
+            foreach((array)$roleInfo as $role)
                 $role->department;
             $data = [
                 'baseinfo' => $userInfo,
