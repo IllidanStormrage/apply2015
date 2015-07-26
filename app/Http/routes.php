@@ -20,12 +20,14 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
         return bcrypt('123456');
     }]);
     Route::post('test', ['middleware' => 'roleCheck', 'as' => 'api/test', 'uses' => 'AcademyController@index']);
-    Route::post('login', ['as' => 'api/login', 'uses' => 'LoginController@login']);
+
 
 
     /***正式路由****/
-    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@cacheRoleRelation']);
-    Route::get('academy', ['as' => 'api/academy', 'uses' => 'AcademyController@index']);
+    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@cacheRoleRelation']);//把权限表存入缓存
+    Route::get('academy', ['as' => 'api/academy', 'uses' => 'AcademyController@index']);//学院列表
+    Route::post('login', ['as' => 'api/login', 'uses' => 'LoginController@login']);//登录
+    Route::post('addmember', ['as' => 'api/addmember', 'uses' => 'SetMemberController@edit']);//部门添加人员
 
     /*************/
 });
