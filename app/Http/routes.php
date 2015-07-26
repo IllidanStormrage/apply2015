@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
     Route::get('pwd', ['as' => 'api/pwd', function() {
         return bcrypt('123456');
@@ -37,6 +38,12 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
 
 /********Excelsior's Route***************/
 Route::group(['prefix' => 'home', 'namespace' => 'Home'], function() {
-    Route::get('test', ['as' => 'home/test', 'uses' => 'AcademyController@index']);
+    Route::get('index', ['as' => 'home/test', 'uses' => 'IndexController@index']);
+    Route::get('presidium', ['as' => 'home/presidium', 'uses' => 'PresidiumController@presidium']);
+    Route::get('department', ['as' => 'home/department', 'uses' => 'DepartmentController@department']);
 });
 /**********************************/
+
+
+
+
