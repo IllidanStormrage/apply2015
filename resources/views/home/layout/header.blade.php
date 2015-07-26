@@ -243,7 +243,7 @@
                                 </li>
                             
                             <li>
-                                <a href="index.html">
+                                <a href="index">
                                     <i class="fa fa-tachometer fa-fw">
                                         <div class="icon-bg bg-orange"></div>
                                     </i>
@@ -261,13 +261,13 @@
                                 </a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="frontend-one-page.html">
+                                        <a href="presidium">
                                             <i class="fa fa-rocket"></i>
                                             <span class="submenu-title">主席团详情</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="frontend-one-page.html">
+                                        <a href="department">
                                             <i class="fa fa-rocket"></i>
                                             <span class="submenu-title">部门详情</span>
                                         </a>
@@ -294,7 +294,7 @@
                                         </a>
                                         <ul class="nav nav-third-level">
                                             <li>
-                                                <a href="grid-range-slider.html">
+                                                <a href="">
                                                     <i class="fa fa-angle-right"></i>
                                                     <span class="submenu-title">流程设置</span>
                                                 </a>
@@ -336,7 +336,4 @@
                     </div>
                 </nav>
                 <!--END SIDEBAR MENU-->
-
-                <!--BEGIN PAGE WRAPPER-->
-                @yield('container')
 
