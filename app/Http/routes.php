@@ -25,10 +25,13 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
 
 
     /***正式路由****/
-    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@cacheRoleRelation']);//把权限表存入缓存
+//    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@cacheRoleRelation']);//把权限表存入缓存
+    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@cacheDepartmentMembers']);//把权限表存入缓存
     Route::get('academy', ['as' => 'api/academy', 'uses' => 'AcademyController@index']);//学院列表
     Route::post('login', ['as' => 'api/login', 'uses' => 'LoginController@login']);//登录
-    Route::post('addmember', ['as' => 'api/addmember', 'uses' => 'SetMemberController@edit']);//部门添加人员
+    Route::post('addmember', ['as' => 'api/addmember', 'uses' => 'SetMemberController@add']);//部门添加人员
+    Route::post('editmember', ['as' => 'api/editmember', 'uses' => 'SetMemberController@edit']);//部门添加人员
+    Route::post('deletemember', ['as' => 'api/editmember', 'uses' => 'SetMemberController@del']);//部门添加人员
 
     /*************/
 });

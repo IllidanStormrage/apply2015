@@ -6,6 +6,7 @@ use App\Model\Academy;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 
 class AcademyController extends Controller
 {
@@ -17,7 +18,7 @@ class AcademyController extends Controller
     public function index()
     {
         //
-        return Academy::all();
+        return \Cache::get('academyList');
     }
 
     /**

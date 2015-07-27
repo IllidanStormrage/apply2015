@@ -9,4 +9,12 @@ class Department extends Model
     //
     protected $table = 'department';
 
+    protected $fillable = ['department', 'organization_id', 'organization_level', 'show'];
+
+    public $timestamps = false;
+
+    public function users() {
+        return $this->hasOne('App\Model\User', 'id', 'user_id');
+    }
+
 }
