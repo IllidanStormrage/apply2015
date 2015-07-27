@@ -15,7 +15,7 @@ class SetDepartmentController extends Controller
      */
     public function index()
     {
-        //
+        return \Cache::get('organization_department');
     }
 
     /**

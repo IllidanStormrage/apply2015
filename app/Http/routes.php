@@ -32,7 +32,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
     Route::post('editmember', ['as' => 'api/editmember', 'uses' => 'SetMemberController@edit']);//部门编辑人员
     Route::post('deletemember', ['as' => 'api/editmember', 'uses' => 'SetMemberController@del']);//部门删除人员
     Route::post('member', ['as' => 'api/member', 'uses' => 'SetMemberController@index']);//部门浏览人员
-
+    Route::get('departmentlist', ['as' => 'api/departmentlist', 'uses' => 'SetDepartmentController@index']);//查看部门列表
     /*************/
 });
 
