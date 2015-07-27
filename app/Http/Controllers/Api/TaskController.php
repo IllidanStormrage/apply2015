@@ -6,8 +6,8 @@ use App\Model\Academy;
 use App\Model\Department;
 use App\Model\Organization;
 use App\Model\User_department;
-use App\Role;
-use App\Role_route;
+use App\Model\Role;
+use App\Model\Role_route;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -15,11 +15,11 @@ use App\Http\Controllers\Controller;
 class TaskController extends Controller {
 
     public function taskList() {
-
         self::cacheAcademyList();
-        self::cacheDepartmentMembers();
         self::cacheRoleRelation();
         self::cacheOrganizationDepartments();
+        self::cacheDepartmentMembers();
+        return ['status' => 200, 'info' => '成功!'];
     }
 
     //缓存学院列表
@@ -72,15 +72,14 @@ class TaskController extends Controller {
         foreach($organizations as $departments) {
             foreach($departments['departments'] as $department) {
                 $departmentMember = User_department::where('department_id', '=', $department['id'])->join('users', 'user_department.user_id', '=', 'users.id')->get();
-                return $departmentMember;
                 if (\Cache::has('department_'.$department['id'])) {
                     \Cache::forget('department_'.$department['id']);
                 }
-                \Cache::rememberForever('department_'.$department['id'], function() use ($departmentMember) {
+                $value[] = \Cache::rememberForever('department_'.$department['id'], function() use ($departmentMember) {
                     return $departmentMember;
                 });
             }
         }
-
+        return $value;
     }
 }

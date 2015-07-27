@@ -20,18 +20,18 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
     Route::get('pwd', ['as' => 'api/pwd', function() {
         return bcrypt('123456');
     }]);
-    Route::post('test', ['middleware' => 'roleCheck', 'as' => 'api/test', 'uses' => 'AcademyController@index']);
+    Route::post('test', [ 'as' => 'api/test', 'uses' => 'AcademyController@index']);
 
 
 
     /***正式路由****/
-//    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@cacheRoleRelation']);//把权限表存入缓存
-    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@cacheDepartmentMembers']);//把权限表存入缓存
+    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@taskList']);//把权限表存入缓存
     Route::get('academy', ['as' => 'api/academy', 'uses' => 'AcademyController@index']);//学院列表
     Route::post('login', ['as' => 'api/login', 'uses' => 'LoginController@login']);//登录
     Route::post('addmember', ['as' => 'api/addmember', 'uses' => 'SetMemberController@add']);//部门添加人员
-    Route::post('editmember', ['as' => 'api/editmember', 'uses' => 'SetMemberController@edit']);//部门添加人员
-    Route::post('deletemember', ['as' => 'api/editmember', 'uses' => 'SetMemberController@del']);//部门添加人员
+    Route::post('editmember', ['as' => 'api/editmember', 'uses' => 'SetMemberController@edit']);//部门编辑人员
+    Route::post('deletemember', ['as' => 'api/editmember', 'uses' => 'SetMemberController@del']);//部门删除人员
+    Route::post('member', ['as' => 'api/member', 'uses' => 'SetMemberController@index']);//部门浏览人员
 
     /*************/
 });
