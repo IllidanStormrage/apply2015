@@ -36,6 +36,7 @@
                                         <div id="table-0" class="tab-pane fade active in">
                                             <div class="row">
                                                 <div class="col-lg-12">
+                                                    <h3 class="mbxl">红岩网校工作站夏季招新 笔试流程详情</h3>
                                                     <div class="form-horizontal">
                                                         <div class="form-group">
                                                             <p class="col-sm-3 control-label">类型 :</p><p class="col-sm-9 control-label" style="text-align: left;">面试</p>
@@ -49,8 +50,8 @@
                                                         <div class="form-group">
                                                             <p class="col-sm-3 control-label">备注 :</p><p class="col-sm-9 control-label" style="text-align: left;">巴拉拉小魔仙</p>
                                                         </div>
-                                                        <button type="button" class="btn btn-default">修改</button>
-                                                        <button type="button" class="btn btn-default">删除</button>
+                                                        <button type="button" class="btn btn-primary" style="float: right;margin-left: 10px;">删除</button>
+                                                        <button type="button" class="btn btn-default" style="float: right;margin-left: 10px;">修改</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -58,7 +59,23 @@
                                         <div id="table-1" class="tab-pane fade">
                                             <div class="row">
                                                 <div class="col-lg-12">
-
+                                                    <h3 class="mbxl">红岩网校工作站夏季招新 笔试流程详情</h3>
+                                                    <div class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <p class="col-sm-3 control-label">类型 :</p><p class="col-sm-9 control-label" style="text-align: left;">面试</p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <p class="col-sm-3 control-label">时间 :</p><p class="col-sm-9 control-label" style="text-align: left;">九月五号下午两点到四点</p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <p class="col-sm-3 control-label">地点 :</p><p class="col-sm-9 control-label" style="text-align: left;">2201</p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <p class="col-sm-3 control-label">备注 :</p><p class="col-sm-9 control-label" style="text-align: left;">巴拉拉小魔仙</p>
+                                                        </div>
+                                                        <button type="button" class="btn btn-primary" style="float: right;margin-left: 10px;">删除</button>
+                                                        <button type="button" class="btn btn-default" style="float: right;margin-left: 10px;">修改</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
