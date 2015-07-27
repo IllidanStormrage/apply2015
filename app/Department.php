@@ -4,9 +4,9 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Organization extends Model
+class Department extends Model
 {
     //
-    protected $table = 'organization';
+    protected $table = 'department';
 
 }
