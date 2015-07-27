@@ -4,8 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <title>{{$title}}</title>
-        <link rel="stylesheet" href="{{asset('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700')}}">
-        <link rel="stylesheet" href="{{asset('http://fonts.googleapis.com/css?family=Oswald:400,700,300')}}">
+        {{--<link rel="stylesheet" href="{{asset('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700')}}">--}}
+        {{--<link rel="stylesheet" href="{{asset('http://fonts.googleapis.com/css?family=Oswald:400,700,300')}}">--}}
         <link rel="stylesheet" href="{{asset('home/vendors/font-awesome/css/font-awesome.min.css')}}">
         <link rel="stylesheet" href="{{asset('home/vendors/bootstrap/css/bootstrap.min.css')}}">
         <!--LOADING STYLESHEET FOR PAGE-->
@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="{{asset('home/vendors/jquery-notific8/jquery.notific8.min.css')}}">
         <link rel="stylesheet" href="{{asset('home/vendors/bootstrap-daterangepicker/daterangepicker-bs3.css')}}">
         <!--Loading style-->
-        <link rel="stylesheet" href="{{asset('home/css/themes/style1/orange-blue.css" class="default-style')}}">
+        {{--<link rel="stylesheet" href="{{asset('home/css/themes/style1/orange-blue.css" class="default-style')}}">--}}
         <link rel="stylesheet" href="{{asset('home/css/themes/style1/orange-blue.css')}}" id="theme-change" class="style-change color-change">
         <link rel="stylesheet" href="{{asset('home/css/style-responsive.css')}}">
     </head>
@@ -45,7 +45,7 @@
                         </button>
                         <a id="logo" href="index.html" class="navbar-brand">
                             <span class="fa fa-rocket"></span>
-                            <span class="logo-text" style="font-size: 20px;">社团管理系统</span>
+                            <span class="logo-text" style="font-size: 20px;">学生组织管理系统</span>
                             <span style="display: none" class="logo-text-icon">µ</span>
                         </a>
                     </div>
@@ -112,15 +112,15 @@
                                     <li>
                                         <div class="dropdown-slimscroll">
                                             <ul>
-                                                <li><a href="email-view-mail.html" target="_blank"><span class="avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg" alt="" class="img-responsive img-circle"/></span><span class="info"><span class="name">Jessica Spencer</span><span class="desc">Lorem ipsum dolor sit amet...</span></span></a>
+                                                <li><a href="email-view-mail.html" target="_blank"><span class="avatar"><img src="" alt="" class="img-responsive img-circle"/></span><span class="info"><span class="name">Jessica Spencer</span><span class="desc">Lorem ipsum dolor sit amet...</span></span></a>
                                                 </li>
-                                                <li><a href="email-view-mail.html" target="_blank"><span class="avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg" alt="" class="img-responsive img-circle"/></span><span class="info"><span class="name">John Smith<span class="label label-blue pull-right">New</span></span><span class="desc">Lorem ipsum dolor sit amet...</span></span></a>
+                                                <li><a href="email-view-mail.html" target="_blank"><span class="avatar"><img src="" alt="" class="img-responsive img-circle"/></span><span class="info"><span class="name">John Smith<span class="label label-blue pull-right">New</span></span><span class="desc">Lorem ipsum dolor sit amet...</span></span></a>
                                                 </li>
-                                                <li><a href="email-view-mail.html" target="_blank"><span class="avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg" alt="" class="img-responsive img-circle"/></span><span class="info"><span class="name">John Doe<span class="label label-orange pull-right">10 min</span></span><span class="desc">Lorem ipsum dolor sit amet...</span></span></a>
+                                                <li><a href="email-view-mail.html" target="_blank"><span class="avatar"><img src="" alt="" class="img-responsive img-circle"/></span><span class="info"><span class="name">John Doe<span class="label label-orange pull-right">10 min</span></span><span class="desc">Lorem ipsum dolor sit amet...</span></span></a>
                                                 </li>
-                                                <li><a href="email-view-mail.html" target="_blank"><span class="avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg" alt="" class="img-responsive img-circle"/></span><span class="info"><span class="name">John Smith</span><span class="desc">Lorem ipsum dolor sit amet...</span></span></a>
+                                                <li><a href="email-view-mail.html" target="_blank"><span class="avatar"><img src="" alt="" class="img-responsive img-circle"/></span><span class="info"><span class="name">John Smith</span><span class="desc">Lorem ipsum dolor sit amet...</span></span></a>
                                                 </li>
-                                                <li><a href="email-view-mail.html" target="_blank"><span class="avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg" alt="" class="img-responsive img-circle"/></span><span class="info"><span class="name">John Smith</span><span class="desc">Lorem ipsum dolor sit amet...</span></span></a>
+                                                <li><a href="email-view-mail.html" target="_blank"><span class="avatar"><img src="" alt="" class="img-responsive img-circle"/></span><span class="info"><span class="name">John Smith</span><span class="desc">Lorem ipsum dolor sit amet...</span></span></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -178,7 +178,7 @@
 
                             <li class="dropdown topbar-user">
                                 <a data-hover="dropdown" href="#" class="dropdown-toggle">
-                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;
+                                    <img src="" alt="" class="img-responsive img-circle" />&nbsp;
                                     <span >John Doe</span>&nbsp;
                                     <span class="caret"></span>
                                 </a>
@@ -222,26 +222,23 @@
                 <nav id="sidebar" class="navbar-default navbar-static-side" role="navigation">
                     <div class="sidebar-collapse menu-scroll">
                         <ul id="side-menu" class="nav">
-                            
-                                <li class="user-panel">
-                                    <div class="thumb"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" alt="" class="img-circle" />
-                                    </div>
-                                    <div class="info">
-                                        <p>John Doe</p>
-                                        <ul class="list-inline list-unstyled">
-                                            <li><a href="extra-profile.html" data-hover="tooltip" title="Profile"><i class="fa fa-user"></i></a>
-                                            </li>
-                                            <li><a href="email-inbox.html" data-hover="tooltip" title="Mail"><i class="fa fa-envelope"></i></a>
-                                            </li>
-                                            <li><a href="#" data-hover="tooltip" title="Setting" data-toggle="modal" data-target="#modal-config"><i class="fa fa-cog"></i></a>
-                                            </li>
-                                            <li><a href="extra-signin.html" data-hover="tooltip" title="Logout"><i class="fa fa-sign-out"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                            
+                            <li class="user-panel">
+                                <div class="thumb"><img src="" alt="" class="img-circle" /></div>
+                                <div class="info">
+                                    <p>John Doe</p>
+                                    <ul class="list-inline list-unstyled">
+                                        <li><a href="extra-profile.html" data-hover="tooltip" title="Profile"><i class="fa fa-user"></i></a>
+                                        </li>
+                                        <li><a href="email-inbox.html" data-hover="tooltip" title="Mail"><i class="fa fa-envelope"></i></a>
+                                        </li>
+                                        <li><a href="#" data-hover="tooltip" title="Setting" data-toggle="modal" data-target="#modal-config"><i class="fa fa-cog"></i></a>
+                                        </li>
+                                        <li><a href="extra-signin.html" data-hover="tooltip" title="Logout"><i class="fa fa-sign-out"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
                             <li>
                                 <a href="index">
                                     <i class="fa fa-tachometer fa-fw">
@@ -250,10 +247,9 @@
                                     <span class="menu-title">Dashboard</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="#">
-                                    <i class="fa fa-laptop fa-fw">
+                                    <i class="glyphicon glyphicon-th fa-fw">
                                         <div class="icon-bg bg-pink"></div>
                                     </i>
                                     <span class="menu-title">组织详情</span>
@@ -262,23 +258,21 @@
                                 <ul class="nav nav-second-level">
                                     <li>
                                         <a href="presidium">
-                                            <i class="fa fa-rocket"></i>
+                                            <i class="fa fa-group"></i>
                                             <span class="submenu-title">主席团详情</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="department">
-                                            <i class="fa fa-rocket"></i>
+                                            <i class="fa fa-sitemap"></i>
                                             <span class="submenu-title">部门详情</span>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
-
-                            
                             <li>
                                 <a href="#">
-                                    <i class="fa fa-database fa-fw">
+                                    <i class="fa fa-bullhorn fa-fw">
                                         <div class="icon-bg bg-red"></div>
                                     </i>
                                     <span class="menu-title">新生报名</span>
@@ -288,20 +282,20 @@
                                 <ul class="nav nav-second-level">
                                     <li>
                                         <a href="#">
-                                            <i class="fa fa-table"></i>
+                                            <i class="fa fa-list-ol"></i>
                                             <span class="submenu-title">审核流程</span>
                                             <span class="fa arrow"></span>
                                         </a>
                                         <ul class="nav nav-third-level">
                                             <li>
-                                                <a href="">
-                                                    <i class="fa fa-angle-right"></i>
+                                                <a href="set">
+                                                    <i class="fa fa-cogs"></i>
                                                     <span class="submenu-title">流程设置</span>
                                                 </a>
                                             </li>
-                                             <li>
-                                                <a href="grid-range-slider.html">
-                                                    <i class="fa fa-angle-right"></i>
+                                            <li>
+                                                <a href="bar">
+                                                    <i class="fa fa-align-left"></i>
                                                     <span class="submenu-title">流程进度</span>
                                                 </a>
                                             </li>
@@ -309,28 +303,63 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fa fa-table"></i>
-                                            <span class="submenu-title">jPList with jQuery UI</span>
-                                            <span class="fa arrow"></span>
+                                            <i class="fa fa-check"></i>
+                                            <span class="submenu-title">新生报名审核</span>
                                         </a>
-                                        <ul class="nav nav-third-level">
-                                            <li>
-                                                <a href="grid-range-slider.html">
-                                                    <i class="fa fa-angle-right"></i>
-                                                    <span class="submenu-title">Range Slider</span>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-plus"></i>
+                                            <span class="submenu-title">新报名人员添加</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="animations.html">
-                                    <i class="fa fa-slack fa-fw">
+                                <a href="">
+                                    <i class="fa fa-dribbble fa-fw">
                                         <div class="icon-bg bg-green"></div>
                                     </i>
-                                    <span class="menu-title">Animations</span>
+                                    <span class="menu-title">组织活动</span>
+                                    <span class="fa arrow"></span>
                                 </a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-pencil"></i>
+                                            <span class="submenu-title">弹幕活动申请</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-magic"></i>
+                                            <span class="submenu-title">参与活动</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-list-ul fa-fw">
+                                        <div class="icon-bg bg-green"></div>
+                                    </i>
+                                    <span class="menu-title">管理员操作明细</span>
+                                    <span class="fa arrow"></span>
+                                </a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="">
+                                            <i class="fa fa-list-ul"></i>
+                                            <span class="submenu-title">管理员添加报名人员明细</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-list-ul"></i>
+                                            <span class="submenu-title">短信推送明细</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
