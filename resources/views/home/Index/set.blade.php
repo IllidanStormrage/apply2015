@@ -119,6 +119,7 @@
                         </div>
                     </div>
 
+
                         {{--<ul id="tableactiondTab" class="nav nav-tabs">--}}
                             {{--<li class="active"><a href="#table-0" data-toggle="tab">笔试</a></li>--}}
                             {{--<li><a href="#table-1" data-toggle="tab">第一次面试</a></li>--}}
