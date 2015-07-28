@@ -9,7 +9,7 @@ class Department extends Model
     //
     protected $table = 'department';
 
-    protected $fillable = ['department', 'organization_id', 'organization_level', 'show'];
+    protected $fillable = ['department', 'organization_id', 'organization_level', 'show', 'introduce'];
 
     public $timestamps = false;
 

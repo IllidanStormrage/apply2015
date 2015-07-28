@@ -71,7 +71,7 @@ class TaskController extends Controller {
         }
         foreach($organizations as $departments) {
             foreach($departments['departments'] as $department) {
-                $departmentMember = User_department::where('department_id', '=', $department['id'])->join('users', 'user_department.user_id', '=', 'users.id')->get();
+                $departmentMember = User_department::where('department_id', '=', $department['id'])->join('users', 'user_department.user_id', '=', 'users.id')->get();//todo select('')
                 if (\Cache::has('department_'.$department['id'])) {
                     \Cache::forget('department_'.$department['id']);
                 }

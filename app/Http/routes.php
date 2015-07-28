@@ -25,7 +25,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
 
 
     /***正式路由****/
-    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@taskList']);//把权限表存入缓存
+    Route::get('cache', ['as' => 'api/cache', 'uses' => 'TaskController@taskList']);//把一些数据存入缓存
     Route::get('academy', ['as' => 'api/academy', 'uses' => 'AcademyController@index']);//学院列表
     Route::post('login', ['as' => 'api/login', 'uses' => 'LoginController@login']);//登录
     Route::post('addmember', ['as' => 'api/addmember', 'uses' => 'SetMemberController@add']);//部门添加人员
@@ -33,6 +33,9 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
     Route::post('deletemember', ['as' => 'api/editmember', 'uses' => 'SetMemberController@del']);//部门删除人员
     Route::post('member', ['as' => 'api/member', 'uses' => 'SetMemberController@index']);//部门浏览人员
     Route::get('departmentlist', ['as' => 'api/departmentlist', 'uses' => 'SetDepartmentController@index']);//查看部门列表
+    Route::post('departmentadd', ['as' => 'api/departmentadd', 'uses' => 'SetDepartmentController@create']);//添加部门
+    Route::post('departmentedit', ['as' => 'api/departmentedit', 'uses' => 'SetDepartmentController@edit']);//修改部门
+    Route::post('departmentdelete', ['as' => 'api/departmentdelete', 'uses' => 'SetDepartmentController@destroy']);//删除部门
     /*************/
 });
 
