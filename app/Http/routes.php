@@ -36,6 +36,10 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
     Route::post('departmentadd', ['as' => 'api/departmentadd', 'uses' => 'SetDepartmentController@create']);//添加部门
     Route::post('departmentedit', ['as' => 'api/departmentedit', 'uses' => 'SetDepartmentController@edit']);//修改部门
     Route::post('departmentdelete', ['as' => 'api/departmentdelete', 'uses' => 'SetDepartmentController@destroy']);//删除部门
+    Route::post('progressadd', ['as' => 'api/progressadd', 'uses' => 'SetProgressController@create']);//添加流程
+    Route::post('progressdel', ['as' => 'api/progressdel', 'uses' => 'SetProgressController@destory']);//删除流程
+    Route::post('progressedit', ['as' => 'api/progressedit', 'uses' => 'SetProgressController@edit']);//编辑流程
+    Route::post('progress', ['as' => 'api/progress', 'uses' => 'SetProgressController@index']);//浏览流程
     /*************/
 });
 
