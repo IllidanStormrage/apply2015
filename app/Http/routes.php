@@ -43,6 +43,9 @@ Route::group(['prefix' => 'home', 'namespace' => 'Home'], function() {
     Route::get('department', ['as' => 'home/department', 'uses' => 'DepartmentController@department']);
     Route::get('set', ['as' => 'home/set', 'uses' => 'SetController@set']);
     Route::get('bar', ['as' => 'home/bar', 'uses' => 'BarController@bar']);
+    Route::get('audit', ['as' => 'home/audit', 'uses' => 'AuditController@audit']);
+    Route::get('add', ['as' => 'home/add', 'uses' => 'AddController@add']);
+    Route::get('info', ['as' => 'home/info', 'uses' => 'InfoController@info']);
 });
 /**********************************/
 

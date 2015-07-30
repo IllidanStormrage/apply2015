@@ -46,5 +46,6 @@
         <script src="{{asset('home/vendors/sco.message/sco.message.js')}}"></script>
         <script src="{{asset('home/vendors/intro.js/intro.js')}}"></script>
         <script src="{{asset('home/js/index.js')}}"></script>
+        @yield('singlePageJS');
     </body>
 </html>

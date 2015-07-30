@@ -23,6 +23,7 @@
         {{--<link rel="stylesheet" href="{{asset('home/css/themes/style1/orange-blue.css" class="default-style')}}">--}}
         <link rel="stylesheet" href="{{asset('home/css/themes/style1/orange-blue.css')}}" id="theme-change" class="style-change color-change">
         <link rel="stylesheet" href="{{asset('home/css/style-responsive.css')}}">
+        @yield('singlePageCss');
     </head>
 
     <body class=" ">
@@ -281,36 +282,27 @@
                                 </a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="#">
-                                            <i class="fa fa-list-ol"></i>
-                                            <span class="submenu-title">审核流程</span>
-                                            <span class="fa arrow"></span>
+                                        <a href="set">
+                                            <i class="fa fa-cogs"></i>
+                                            <span class="submenu-title">审核流程设置</span>
                                         </a>
-                                        <ul class="nav nav-third-level">
-                                            <li>
-                                                <a href="set">
-                                                    <i class="fa fa-cogs"></i>
-                                                    <span class="submenu-title">流程设置</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="bar">
-                                                    <i class="fa fa-align-left"></i>
-                                                    <span class="submenu-title">流程进度</span>
-                                                </a>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="info">
                                             <i class="fa fa-check"></i>
-                                            <span class="submenu-title">新生报名审核</span>
+                                            <span class="submenu-title">新生报名信息</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="audit">
+                                            <i class="fa fa-file-o"></i>
+                                            <span class="submenu-title">新生报名批量审核</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="add">
                                             <i class="fa fa-plus"></i>
-                                            <span class="submenu-title">新报名人员添加</span>
+                                            <span class="submenu-title">线下报名人员添加</span>
                                         </a>
                                     </li>
                                 </ul>
