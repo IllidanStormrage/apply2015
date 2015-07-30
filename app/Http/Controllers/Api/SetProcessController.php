@@ -70,6 +70,7 @@ class SetProcessController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
@@ -83,17 +84,21 @@ class SetProcessController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request  $request
-     * @param  int  $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-        dd($request->all());
+    public function update() {
+        $input = Request::all();
+        $auth = \Auth::user();
+        $auth_role = \Cache::get('user_id_'.$auth['id']);
+        if(trim($input['process_name']) == '' || trim($input['process_name']) == null) {
+            return ['status' => 400, 'info' => '流程名不能为空!'];
+        }
+        if(!$this->checkDepartment($auth_role['role'], $input['department_id'])) {
+            return ['status' => 403, 'info' => '不能修改非本部门流程!'];
+        }
+        if(!$this->checkAuthLevel($auth_role['role'], $input['department_id'])) {
+            return ['status' => 403, 'info' => '权限不够!'];
+        }
+        Process::where('id', '=', $input['process_id'])->update(['processname' => $input['process_name']]);
+        return ['status' => 200, 'info' => '成功'];
     }
 
     /**
