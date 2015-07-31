@@ -17,6 +17,6 @@ class Department extends Model {
     }
 
     public function processes() {
-        return $this->hasMany('App\Model\Process', 'department_id', 'id');
+        return $this->hasMany('App\Model\Process', 'department_id', 'id')->where('remark', '>', 0)->orderBy('remark', 'asc');
     }
 }

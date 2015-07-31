@@ -15,9 +15,9 @@ class SetProcessController extends Controller
      *
      * @return Response
      */
-    public function index()
-    {
-        //
+    public function index() {
+        $input = Request::only('department_id');
+        return \Cache::get('departmentProcess_'.$input['department_id']);
     }
 
     /**
@@ -50,38 +50,9 @@ class SetProcessController extends Controller
         return ['status' => 200, 'info' => '成功', 'data' => $data];
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
-    public function store(Request $request)
+    public function sort($id)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
-
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        //
+        //todo sort process
     }
 
     public function update() {
@@ -101,15 +72,18 @@ class SetProcessController extends Controller
         return ['status' => 200, 'info' => '成功'];
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function destroy() {
+        $input = Request::all();
+        $auth = \Auth::user();
+        $auth_role = \Cache::get('user_id_'.$auth['id']);
+        if(!$this->checkDepartment($auth_role['role'], $input['department_id'])) {
+            return ['status' => 403, 'info' => '不能修改非本部门流程!'];
+        }
+        if(!$this->checkAuthLevel($auth_role['role'], $input['department_id'])) {
+            return ['status' => 403, 'info' => '权限不够!'];
+        }
+        Process::destroy($input['process_id']);//todo 有时间验证下删除的流程是否有报名
+        return ['status' => 200, 'info' => '删除成功!'];
     }
 
     private function checkAuthLevel($roles, $department_id) {
