@@ -19,6 +19,7 @@ class TaskController extends Controller {
         self::cacheRoleRelation();
         self::cacheOrganizationDepartments();
         self::cacheDepartmentMembers();
+        self::cacheProcess();
         return ['status' => 200, 'info' => '成功!'];
     }
 
@@ -82,4 +83,20 @@ class TaskController extends Controller {
         }
         return $value;
     }
+
+    //缓存招新流程
+    public function cacheProcess() {
+        $departments = Department::all();
+        foreach($departments as $department) {
+            if (\Cache::has('departmentProcess_'.$department['id'])) {
+                \Cache::forget('departmentProcess_'.$department['id']);
+            }
+            $value[] = \Cache::rememberForever('departmentProcess_'.$department['id'], function() use ($department) {
+                return $department->processes;
+            });
+        }
+        return $value;
+    }
+
+
 }

@@ -20,7 +20,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
     Route::get('pwd', ['as' => 'api/pwd', function() {
         return bcrypt('123456');
     }]);
-    Route::post('test', [ 'as' => 'api/test', 'uses' => 'AcademyController@index']);
+    Route::post('test', [ 'as' => 'api/test', 'uses' => 'TaskController@cacheProcess']);
 
 
 
