@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::group(['prefix' => 'api', 'namespace' => 'APi'], function() {
+Route::group(['prefix' => 'api', 'namespace' => 'Api'], function() {
     Route::get('pwd', ['as' => 'api/pwd', function() {
         return bcrypt('123456');
     }]);
