@@ -1,4 +1,13 @@
+
     @extends('home.layout.container')
+
+    @section('singlePageCss')
+        <link rel="stylesheet" href="{{asset('home/css/department.css')}}">
+    @stop
+
+    @section('singlePageJS')
+        <script src="{{asset('home/js/department.js')}}"></script>
+    @stop
 
     @section('container')
 
@@ -7,26 +16,184 @@
             <div class="page-content">
                 <div class="row">
                     <div class="col-lg-12">
-                        <ul id="tableactiondTab" class="nav nav-tabs">
-                            <li class="active"><a href="#table-0" data-toggle="tab">管理规划部</a></li>
-                            <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
-                            <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
-                            <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
-                            <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
-                            <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
-                            <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
-                            <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
-                            <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
-                            <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
-                            <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
-                            <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
-                            <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
-                            <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
-                            <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
-                            <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
-                            <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
-                            <button type="button" data-target="#modal-add-department" data-toggle="modal" class="btn btn-default glyphicon glyphicon-plus" style="font-size: 16px;background-color: transparent;border-color: transparent;"></button>
-                        </ul>
+                        <div class="screen">
+                            <i class="fa fa-unsorted upAndDown"></i>
+                            <ul id="tableactiondTab" class="nav nav-tabs">
+                                <li class="active"><a href="#table-0" data-toggle="tab">管理规划部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><a href="#table-3" data-toggle="tab">移动开发部</a></li>
+                                <li><a href="#table-4" data-toggle="tab">运营维护部</a></li>
+                                <li><a href="#table-1" data-toggle="tab">视觉设计部</a></li>
+                                <li><a href="#table-2" data-toggle="tab">web研发部</a></li>
+                                <li><button type="button" data-target="#modal-add-department" data-toggle="modal" class="btn btn-default glyphicon glyphicon-plus" style="font-size: 16px;background-color: transparent;border-color: transparent;"></button></li>
+                            </ul>
+                        </div>
                         <div id="tableactionTabContent" class="tab-content">
                             <div id="table-0" class="tab-pane fade active in">
                                 <div class="row">
